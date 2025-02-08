@@ -90,6 +90,7 @@ body {
   display: flex;
   margin-top: 92px;
   width: 100%;
+  justify-content: center;
 }
 
 iframe {
@@ -97,7 +98,12 @@ iframe {
 }
 
 /* Todo lo de aca adentro es para pantalla de compu o notebook */
-@media (width >= 900px) {
+
+@media (width >= 1200px) {
+  .gta-home-container {
+    flex-direction: row;
+  }
+
   .gta-home-video {
     width: 602px;
     padding-left: 16px;
@@ -109,11 +115,5 @@ iframe {
 
   .gta-home-info {
     width: 592px;
-  }
-}
-
-@media (width >= 1200px) {
-  .gta-home-container {
-    flex-direction: row;
   }
 }
