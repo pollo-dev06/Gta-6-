@@ -1,29 +1,29 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Inter", serif;
+  font-family: 'Inter', serif;
   font-optical-sizing: auto;
-  
   font-style: normal;
 }
 
-body{
+body {
   background-image: url(../img/fondo.png);
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 16px;
 }
 
-.button-fill{
+.button-fill {
   width: 196px;
   height: 60px;
   background-color: #fafafa;
   border: none;
-  font-weight:500;
+  font-weight: 500;
   margin-right: 46px;
   display: flex;
   justify-content: center;
@@ -31,12 +31,12 @@ body{
   gap: 9px;
 }
 
-.button-outline{
+.button-outline {
   width: 196px;
   height: 60px;
   background-color: transparent;
   border: none;
-  font-weight:500;
+  font-weight: 500;
   border: solid 1px #fafafa;
   color: #fafafa;
   display: flex;
@@ -45,35 +45,37 @@ body{
   gap: 9px;
 }
 
-
-.contenedor-titulo-info{
+.contenedor-titulo-info {
   max-width: 453px;
   color: #fafafa;
-  
+  img {
+    width: 100%;
+  }
 }
 
-.gta-home-header{
+.gta-home-header {
   display: flex;
-justify-content: center;
-margin-bottom: 62px;
+  justify-content: center;
+  margin-bottom: 62px;
 }
 
-.gta-home-container{
+.gta-home-container {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
 }
 
-.gta-home-info{
-  width: 592px;
+.gta-home-info {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.gta-home-video{
-  padding-left: 16px;
-  width: 602px;
-  p{
+.gta-home-video {
+  p {
     color: #fafafa;
     font-weight: 600;
     margin-bottom: 8px;
@@ -84,9 +86,34 @@ margin-bottom: 62px;
   justify-content: center;
 }
 
-.gta-home-info-buttons{
+.gta-home-info-buttons {
   display: flex;
   margin-top: 92px;
+  width: 100%;
+}
 
-  
+iframe {
+  height: 315px;
+}
+
+/* Todo lo de aca adentro es para pantalla de compu o notebook */
+@media (width >= 900px) {
+  .gta-home-video {
+    width: 602px;
+    padding-left: 16px;
+  }
+
+  .gta-home-container {
+    justify-content: center;
+  }
+
+  .gta-home-info {
+    width: 592px;
+  }
+}
+
+@media (width >= 1200px) {
+  .gta-home-container {
+    flex-direction: row;
+  }
 }
